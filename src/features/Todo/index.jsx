@@ -3,7 +3,7 @@ import TodoList from './component/Todolist';
 
 
 function TodoFeatue(props) {
-    const button ={
+    const button = {
         padding: '10px',
         margin: '10px 10px',
 
@@ -13,7 +13,9 @@ function TodoFeatue(props) {
         borderRadius: "20px",
         outline: 0,
 
-        fontSize: "15px"
+        fontSize: "15px",
+
+        cursor: "pointer"
 
 
     }
