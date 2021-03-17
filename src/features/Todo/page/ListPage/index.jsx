@@ -1,6 +1,7 @@
 import queryString from 'query-string';
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation, useRouteMatch } from 'react-router';
+import TodoForm from '../../component/TodoForm';
 import TodoList from '../../component/Todolist/index';
 
 function Listpage(props) {
@@ -86,10 +87,23 @@ function Listpage(props) {
     const filterStatus = todos.filter((todo) => {
         return filter === "all" || filter === todo.isComplete;
     });
+
+    // ham xu li form, khi co data tu component con truyen len
+    const handleSubmit = value =>{
+        //Clone todos ra mot mang moi
+        const newTodos = [...todos];
+        //đẩy dữ liệu vào trong todos
+        newTodos.push(value)
+        //cập nhật lại state
+        setTodos(newTodos)
+
+    }
     return (
         <div>
             <h1>COMPONENT-TODOLIST-LISTPAGE</h1>
             {/* {todoProps} chính là cái Props được truyền xuống component todolist  */}
+            {/* handleSubmit là props được truyền xuông TodoForm */}
+            <TodoForm handleSubmit={handleSubmit}/>
             <TodoList
                 todoProps={filterStatus}
                 eventParent={handleClick}
