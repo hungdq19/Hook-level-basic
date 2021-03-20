@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './style.scss';
 
 Album.propTypes = {
     
@@ -9,7 +7,7 @@ Album.propTypes = {
 function Album(props) {
     const {album} = props;
     return (
-        <div>
+        <div >
             <img src={album.sing} alt=""/>
             <span>{album.song}</span>
             <h5>{album.sing}</h5>

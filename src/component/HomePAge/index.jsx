@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 HomePage.propTypes = {
     
@@ -8,7 +7,7 @@ HomePage.propTypes = {
 function HomePage(props) {
     return (
         <div>
-            <h1>HomePage</h1>
+            <h1>HomePageSSSS</h1>
         </div>
     );
 }

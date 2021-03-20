@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch, useHistory, useLocation, useParams, useRouteMatch } from 'react-router';
 import DeteilPage from './page/DeteilPage';
 import Listpage from './page/ListPage';
+import './style.scss';
 
 
 function TodoFeatue(props) {
@@ -11,7 +12,7 @@ function TodoFeatue(props) {
     const history = useHistory();
     
     return (
-        <div>
+        <div className="Todo__content">
             {/* Nested routing trong component con */}
             <Switch>
                 <Route path={math.path} component={Listpage} exact/>
